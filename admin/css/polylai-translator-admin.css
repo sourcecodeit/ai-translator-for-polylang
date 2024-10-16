@@ -1,0 +1,287 @@
+ .polylaitr-link {
+ 	text-decoration: underline;
+ 	cursor: pointer;
+ 	opacity: 0;
+ }
+
+ tr:hover .polylaitr-link {
+ 	opacity: 1;
+ }
+
+ #polylaitr-modal {
+ 	position: fixed;
+ 	background-color: rgba(0, 0, 0, .6);
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	z-index: 10;
+ }
+
+ #polylaitr-modal .polylaitr-panel {
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 200px;
+ 	background: #fff;
+ 	border: 4px solid #f0f0f0;
+ 	border-radius: 10px;
+ 	width: 400px;
+ 	margin-left: -200px;
+ 	padding: 16px;
+ 	box-shadow: #333 0 0 20px;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+ }
+
+ #polylaitr-modal .polylaitr-panel h2 {
+ 	margin: 0;
+ }
+
+ .polylaitr-buttons {
+ 	display: flex;
+ 	justify-content: end;
+ 	gap: 6px;
+ }
+
+ .polylaitr-close {
+ 	position: absolute;
+ 	top: 10px;
+ 	right: 10px;
+ 	cursor: pointer;
+ 	color: #666;
+ }
+
+ #polylaitr-langs .dashicons-yes {
+ 	color: green;
+ }
+
+ #polylaitr-langs .dashicons-minus {
+ 	color: #ccc;
+ }
+
+ #polylaitr-content {
+ 	margin-top: 20px;
+ }
+
+ .polylaitr-cell {
+ 	display: flex;
+ 	gap: 10px;
+ }
+
+ .polylaitr-progress {
+ 	display: none;
+ 	opacity: 0;
+ 	animation: pulse 2s infinite;
+ }
+
+ .polylaitr-rotate {
+ 	animation: rotate 2s infinite;
+ 	animation-timing-function: linear;
+ }
+
+ @keyframes pulse {
+ 	0% {
+ 		opacity: 0;
+ 	}
+
+ 	50% {
+ 		opacity: 1;
+ 	}
+
+ 	100% {
+ 		opacity: 0;
+ 	}
+ }
+
+ @keyframes rotate {
+ 	0% {
+ 		transform: rotate(0deg);
+ 	}
+
+ 	100% {
+ 		transform: rotate(360deg);
+ 	}
+ }
+
+ .polylai-warn {
+ 	background-color: #f3f4b2;
+ 	border: 1px solid #ccc;
+ 	padding: 10px;
+ 	display: inline-block;
+ 	margin-top: 10px;
+ }
+
+ .polylai-error {
+ 	background-color: #f4b2b2;
+ 	border: 1px solid #6a0808;
+ 	padding: 10px;
+ 	display: inline-block;
+ 	margin-top: 10px;
+ }
+
+ .polylai-hidden {
+ 	display: none !important;
+ }
+
+ .polylai-lang-badge {
+ 	background-color: #71ef7c;
+ 	padding: 4px 6px;
+ 	border-radius: 4px;
+ 	font-size: 14px;
+ 	font-weight: bold;
+ }
+
+ .polylai-lang-badge.polylai-disabled {
+ 	background-color: #ddd;
+ 	color: #999;
+ }
+
+ .polylai-hover {
+ 	display: none;
+ }
+
+ tr:hover .polylai-hover {
+ 	display: inline-block;
+ }
+
+ .polylai-cron-activity {
+ 	background-color: #71ef7c;
+ 	padding: 4px 6px;
+ 	border-radius: 4px;
+ 	font-size: 14px;
+ 	font-weight: bold;
+ 	display: inline-block;
+ }
+
+ .polylai-cron-activity.cron-error {
+ 	background-color: #f4b2b2;
+ 	border: 1px solid #6a0808;
+ }
+ .polylai-cron-panel {
+	text-align: left;
+	display: inline-block;
+	font-family: 'Courier New', Courier, monospace;
+	background-color: #FFF495;
+	padding: 10px;
+ }
+
+ .polylai-section-alerts {
+	display: flex;	
+	flex-direction: column;
+	gap: 10px;	
+	position: relative;
+ }
+
+ .polylai-section-alerts .polylai-alert-panel {
+	background-color: #FFF495;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, .05) 2px 4px 4px;	
+	max-width: 600px;
+	position: relative;
+ }
+ .polylai-section-alerts .polylai-alert-panel.polylai-info {
+	background-color: #d6ffef;
+ }
+ .polylai-section-alerts .polylai-alert-panel:before {
+	content: "";
+	width: 70px;
+	height: 70px;
+	background-image: url('../img/logo.png');
+	background-size: contain;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+ }
+ .polylai-section-alerts .polylai-alert-panel.polylai-info:before {
+	
+ }
+ .polylai-section-alerts .polylai-alert-panel h4 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 16px;
+}
+.polylai-section-alerts .polylai-alert-panel p {
+	width: calc(100% - 80px);
+}
+
+.polylai-modal-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}
+.polylai-modal-dialog {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 760px;
+	background-color: #fff;
+	padding: 20px;
+}
+.polylai-modal-dialog h4 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.polylai-modal-body {
+	font-size: 14px;
+}
+.polylai-modal-body li span {
+	font-size: 12px;
+	position: relative;
+	top: 3px;
+}
+.polylai-modal-header {
+	position: relative;
+}
+.polylai-modal-footer {
+	text-align: right;
+	padding-top: 20px;
+}
+[data-polyalai-close] {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: -10px;
+}
+.polylai-form h3:nth-of-type(3),
+.polylai-form .form-table:nth-of-type(3) {
+	display: none;
+}
+#polylai-modal-logs th {
+	white-space: nowrap;
+}
+#polylai-modal-logs .polylai-modal-dialog {
+	width: 60vw;
+	min-width: 800px;
+}
+#polylai-modal-logs .polylai-modal-body {
+	overflow-y: auto;
+	max-height: 60vh;
+}
+.polylai-log-badge {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 6px;
+}
+.polylai-log-badge.log-type-info {
+	background-color: #d6ffef;
+}
+.polylai-log-badge.log-type-error {
+	background-color: #f4b2b2;
+}
+.polylai-log-badge.log-type-debug {
+	background-color: #fff495;
+}
+.polylai-log-badge.log-type-success {
+	background-color: #71ef7c;
+}
